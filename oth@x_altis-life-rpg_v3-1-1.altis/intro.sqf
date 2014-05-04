@@ -40,7 +40,7 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Flip your car back over (use the interaction menu).",
 		"NEW: Civ's save gear on respawn.",
 		"NEW: Auto Sync every 10 minutes.",
-		"NEW: Sting added to donator's Tier 2 - Happy now Matt...",
+		"NEW: Sting added to donator's Tier 2",
 		"NEW: Titan Launchers price decreased slightly.",
 		"NEW: Cop Boat Shop added to Pyrgos.  Garages added also.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.enjin.com/"
