@@ -25,7 +25,7 @@ _civ = [format["Welcome to RoT Aussie Life",name player] hintC
 		"NEW: Sting added to donator's Tier 2",
 		"NEW: Titan Launchers price decreased slightly.",
 		"NEW: New Garage in Pyrgos.",
-		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.enjin.com/"
+		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
 _cop = [format["Welcome to RoT Aussie Life",name player] hintC
@@ -43,7 +43,7 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"NEW: Sting added to donator's Tier 2",
 		"NEW: Titan Launchers price decreased slightly.",
 		"NEW: Cop Boat Shop added to Pyrgos.  Garages added also.",
-		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.enjin.com/"
+		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
 switch (playerSide) do {
