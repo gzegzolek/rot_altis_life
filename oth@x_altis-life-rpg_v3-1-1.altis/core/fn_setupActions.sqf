@@ -14,6 +14,9 @@ switch (playerSide) do
 		//Rob person
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		//Grab Turtle
+		life_actions = life_actions + [player addAction["Grab Turtle",life_fnc_catchTurtle,"",0,false,false,"",'
+		!isNull cursorTarget && (typeOf cursorTarget) == "Turtle_F" && ((player distance (getMarkerPos "turtle_1") < 350) OR (player distance (getMarkerPos "turtle_2") < 350) OR (player distance (getMarkerPos "turtle_3") < 350)) && !alive cursorTarget && (life_carryWeight + (["turtle"] call life_fnc_itemWeight)) <= life_maxWeight']];
 		//SVest.
 		life_actions = life_actions + [player addAction["Activate Suicide Vest",life_fnc_suicideBomb,"",0,false,false,"",'
 		vest player == "V_HarnessOGL_brn" && alive player && playerSide == civilian && !life_istazed && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];

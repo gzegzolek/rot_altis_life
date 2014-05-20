@@ -33,7 +33,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	private["_isVehicle","_miscItems","_money"];
 	_isVehicle = if((_curTarget isKindOf "landVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
-	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
+	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F"];
 	_money = "Land_Money_F";
 	
 	//It's a vehicle! open the vehicle interaction key!
@@ -46,15 +46,9 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	} else {
 		//Is it a animal type?
 		if((typeOf _curTarget) in _animalTypes) then {
-			if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchTurtle;
-				waitUntil {scriptDone _handle};
-			} else {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchFish;
-				waitUntil {scriptDone _handle};
-			};
+			private["_handle"];
+			_handle = [_curTarget] spawn life_fnc_catchFish;
+			waitUntil {scriptDone _handle};
 		} else {
 			//OK, it wasn't a vehicle so let's see what else it could be?
 			if((typeOf _curTarget) in _miscItems) then {
