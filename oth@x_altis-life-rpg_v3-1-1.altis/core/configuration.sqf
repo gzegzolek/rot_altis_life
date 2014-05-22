@@ -255,12 +255,12 @@ __CONST__(buy_array,buy_array);
 life_weapon_shop_array =
 [
 	["arifle_sdar_F",7500],
-	["hgun_P07_snds_F",650],
-	["hgun_P07_F",1500],
+	["hgun_P07_snds_F",0],
+	["hgun_P07_F",0],
 	["Binocular",50],
 	["ItemGPS",45],
-	["ToolKit",75],
-	["FirstAidKit",65],
+	["ToolKit",0],
+	["FirstAidKit",0],
 	["Medikit",450],
 	["NVGoggles",0],
 	["16Rnd_9x21_Mag",15],
@@ -271,13 +271,13 @@ life_weapon_shop_array =
 	["Chemlight_yellow",50],
 	["Chemlight_green",50],
 	["Chemlight_red",50],
-	["hgun_Rook40_F",500],
+	["hgun_Rook40_F",0],
 	["arifle_Katiba_F",5000],
-	["30Rnd_556x45_Stanag",65],
-	["20Rnd_762x51_Mag",85],
-	["30Rnd_65x39_caseless_green",50],
-	["DemoCharge_Remote_Mag",7500],
-	["SLAMDirectionalMine_Wire_Mag",2575],
+	["30Rnd_556x45_Stanag",0],
+	["20Rnd_762x51_Mag",0],
+	["30Rnd_65x39_caseless_green",0],
+	["DemoCharge_Remote_Mag",0],
+	["SLAMDirectionalMine_Wire_Mag",0],
 	["optic_ACO_grn",250],
 	["acc_flashlight",100],
 	["srifle_EBR_F",15000],
@@ -296,9 +296,9 @@ life_weapon_shop_array =
 	["SMG_01_F",1500],
 	["arifle_Mk20C_F",4500],
 	["srifle_GM6_F",150000],
-	["30Rnd_45ACP_Mag_SMG_01",60],
-	["30Rnd_9x21_Mag",30],
-	["5Rnd_127x108_Mag",nil,400]
+	["30Rnd_45ACP_Mag_SMG_01",0],
+	["30Rnd_9x21_Mag",0],
+	["5Rnd_127x108_Mag",nil,0]
 ];
 __CONST__(life_weapon_shop_array,life_weapon_shop_array);
 
