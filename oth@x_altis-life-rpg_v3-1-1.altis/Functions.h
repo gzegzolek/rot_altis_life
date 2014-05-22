@@ -105,6 +105,7 @@ class Life_Client_Core
 		class clothing_bruce {};
 		class clothing_reb {};
 		class clothing_dive {};
+		class clothing_donator {};
 	};
 	
 	class session
