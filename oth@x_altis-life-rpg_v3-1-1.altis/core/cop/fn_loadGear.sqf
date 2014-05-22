@@ -25,6 +25,7 @@ _allowedItems =
 	"muzzle_snds_H",
 	"muzzle_snds_L",
 	"hgun_ACPC2_F", //Sergeants Shop
+	"launch_Titan_F",
 	"arifle_MX_SW_F",
 	"arifle_Mk20C_plain_F",
 	"arifle_MXM_DMS_F",
@@ -33,19 +34,19 @@ _allowedItems =
 if(isNil "_loadout") exitWith {[] call life_fnc_copDefault;}; //Slot data doesn't exist
 if(count _loadout == 0) exitWith {[] call life_fnc_copDefault;}; //Slot data doesn't exist
 _primary = _loadout select 0;
-_launcher = "";
-_handgun = _loadout select 1;
-_magazines = _loadout select 2;
-_uniform = _loadout select 3;
-_vest = _loadout select 4;
-_backpack = _loadout select 5;
-_items = _loadout select 6;
-_primitems = _loadout select 7;
-_secitems = _loadout select 8;
-_handgunitems = _loadout select 9;
-_uitems = _loadout select 10;
-_vitems = _loadout select 11;
-_bitems = _loadout select 12;
+_launcher = _loadout select 1;
+_handgun = _loadout select 2;
+_magazines = _loadout select 3;
+_uniform = _loadout select 4;
+_vest = _loadout select 5;
+_backpack = _loadout select 6;
+_items = _loadout select 7;
+_primitems = _loadout select 8;
+_secitems = _loadout select 9;
+_handgunitems = _loadout select 10;
+_uitems = _loadout select 11;
+_vitems = _loadout select 12;
+_bitems = _loadout select 13;
 
 //This is to piss off cops :)
 if(!(_primary in _allowedItems)) then {_primary = ""};

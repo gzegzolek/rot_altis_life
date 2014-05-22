@@ -5,7 +5,7 @@
 	Description:
 	Saves the player / cops gear in a formatted array.
 */
-private["_allowedItems","_primary","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_curWep"];
+private["_allowedItems","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_curWep"];
 
 //Pre-approved weapons / attachments
 _allowedItems =
@@ -26,6 +26,7 @@ _allowedItems =
 	"muzzle_snds_H",
 	"muzzle_snds_L",
 	"hgun_ACPC2_F", //Sergeants Shop
+	"launch_Titan_F",
 	"arifle_MX_SW_F",
 	"arifle_Mk20C_plain_F",
 	"arifle_MXM_DMS_F",
@@ -34,6 +35,7 @@ _allowedItems =
 
 //Old format / code
 _primary = primaryWeapon player;
+_launcher = secondaryWeapon player;
 _handgun = handGunWeapon player;
 _magazines = [];
 _uniform = uniform player;
@@ -79,4 +81,4 @@ if("Laserdesignator" in assignedItems player) then
 
 player selectWeapon _curWep;
 
-cop_gear = [_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems];
+cop_gear = [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems];

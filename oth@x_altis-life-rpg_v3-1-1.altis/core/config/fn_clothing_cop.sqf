@@ -80,14 +80,15 @@ switch (_filter) do
 	//Backpacks
 	case 4:
 	{
-		_ret =
-		[
-			["B_Kitbag_cbr",nil,800],
-			["B_FieldPack_cbr",nil,500],
-			["B_AssaultPack_cbr",nil,700],
-			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
-		];
+		_ret set[count _ret,["B_Kitbag_cbr",nil,800]];
+		_ret set[count _ret,["B_FieldPack_cbr",nil,500]];
+		_ret set[count _ret,["B_AssaultPack_cbr",nil,700]];
+		_ret set[count _ret,["B_Bergen_sgg",nil,2500]];
+		_ret set[count _ret,["B_Carryall_cbr",nil,3500]];
+		if((__GETC__(life_donator) > 2) && (__GETC__(life_coplevel) > 1)) then
+		{
+			_ret set[count _ret,["B_UAV_01_backpack_F",nil,20000]];
+		};
 	};
 };
 
