@@ -16,15 +16,13 @@ _civ = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Shift H will allow you to surrender.",
 		"Zip tie your foes, get them at the new rebel item store.  Use them in your inventory when close to a civ/cop.",
 		"Shift - N releases a ziptied player.",
-		"Hemmt Trucks have had their cargo limits tripled!!",
-		"Flip your car back over (use the interaction menu).",
-		"New Spawn point if you own a rebel license.",
-		"Rebel Checkpoint added.",
-		"NEW: Civ's save gear on respawn.",
-		"NEW: Auto Sync every 10 minutes.",
-		"NEW: Sting added to donator's Tier 2",
-		"NEW: Titan Launchers price decreased slightly.",
-		"NEW: New Garage in Pyrgos.",
+		"Civ's save gear on respawn.",
+		"Auto Sync every 10 minutes.",
+		"NEW: Donators Clothing Store open - check the Donator store NOW!!",
+		"NEW: New rebel clothing/backpacks available.",
+		"NEW: More backpacks added to Bruce's Outback Outfits.",
+		"NEW: More guns now available in all gun stores.",
+		"NEW: Turtles are fixed and back to $15k per turtle.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
@@ -38,11 +36,12 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Weather System changed.",
 		"Hemmt Trucks have had their cargo limits tripled!!",
 		"Flip your car back over (use the interaction menu).",
-		"NEW: Civ's save gear on respawn.",
-		"NEW: Auto Sync every 10 minutes.",
-		"NEW: Sting added to donator's Tier 2",
-		"NEW: Titan Launchers price decreased slightly.",
-		"NEW: Cop Boat Shop added to Pyrgos.  Garages added also.",
+		"Civ's save gear on respawn.",
+		"Auto Sync every 10 minutes.",
+		"NEW: Donator lvl 3 cop shop added.",
+		"NEW: UAV's now available for donator cops (backback and terminal).",
+		"NEW: AA Launchers added for Sergeants.",
+		"NEW: Turtles are fixed and back to $15k per turtle.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
