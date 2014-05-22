@@ -1,36 +1,13 @@
 /*
 	File: fn_loadGear.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Used for loading cop saved gear loadout.
 */
 private["_allowedItems","_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
 _loadout = cop_gear;
-_allowedItems =
-[
-	"arifle_sdar_F",
-	"hgun_P07_snds_F",
-	"hgun_p07_F",
-	"srifle_GM6_F",
-	"arifle_MX_F",
-	"SMG_02_ACO_F",
-	"optic_Holosight",
-	"acc_flashlight",
-	"arifle_MXC_F",
-	"arifle_MXM_F",
-	"optic_Arco",
-	"optic_MRCO",
-	"optic_SOS",
-	"muzzle_snds_H",
-	"muzzle_snds_L",
-	"hgun_ACPC2_F", //Sergeants Shop
-	"launch_Titan_F",
-	"arifle_MX_SW_F",
-	"arifle_Mk20C_plain_F",
-	"arifle_MXM_DMS_F",
-	"srifle_EBR_F"
-];
+
 if(isNil "_loadout") exitWith {[] call life_fnc_copDefault;}; //Slot data doesn't exist
 if(count _loadout == 0) exitWith {[] call life_fnc_copDefault;}; //Slot data doesn't exist
 _primary = _loadout select 0;
@@ -47,10 +24,6 @@ _handgunitems = _loadout select 10;
 _uitems = _loadout select 11;
 _vitems = _loadout select 12;
 _bitems = _loadout select 13;
-
-//This is to piss off cops :)
-if(!(_primary in _allowedItems)) then {_primary = ""};
-if(!(_handgun in _allowedItems)) then {_handgun = ""};
 
 //Strip the unit down
 RemoveAllWeapons player;

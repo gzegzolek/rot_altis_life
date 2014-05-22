@@ -1,37 +1,11 @@
 /*
 	File: fn_saveGear.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Saves the player / cops gear in a formatted array.
 */
-private["_allowedItems","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_curWep"];
-
-//Pre-approved weapons / attachments
-_allowedItems =
-[
-	"arifle_sdar_F",
-	"hgun_P07_snds_F",
-	"hgun_p07_F",
-	"srifle_GM6_F",
-	"arifle_MX_F",
-	"SMG_02_ACO_F",
-	"optic_Holosight",
-	"acc_flashlight",
-	"arifle_MXC_F",
-	"arifle_MXM_F",
-	"optic_Arco",
-	"optic_MRCO",
-	"optic_SOS",
-	"muzzle_snds_H",
-	"muzzle_snds_L",
-	"hgun_ACPC2_F", //Sergeants Shop
-	"launch_Titan_F",
-	"arifle_MX_SW_F",
-	"arifle_Mk20C_plain_F",
-	"arifle_MXM_DMS_F",
-	"srifle_EBR_F"
-];
+private["_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_curWep"];
 
 //Old format / code
 _primary = primaryWeapon player;
@@ -49,8 +23,6 @@ _uitems = [];
 _vitems = [];
 _bitems = [];
 
-if(!(_primary in _allowedItems)) then {_primary = ""};
-if(!(_handgun in _allowedItems)) then {_handgun = ""};
 if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
 if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
 if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
