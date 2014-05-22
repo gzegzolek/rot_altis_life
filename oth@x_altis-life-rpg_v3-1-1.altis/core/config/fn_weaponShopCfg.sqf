@@ -33,6 +33,7 @@ switch(_shop) do
 						["hgun_P07_snds_F","Stun Pistol",2000],
 						["hgun_P07_F",nil,7500],
 						["Binocular",nil,150],
+						["Rangefinder",nil,7000],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,50],
 						["muzzle_snds_L",nil,650],
@@ -62,6 +63,8 @@ switch(_shop) do
 				["Altis Patrol Officer Shop",
 					[
 						["arifle_MX_F",nil,35000],
+						["SMG_01_F","Vermin",35000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100],
 						["SMG_02_ACO_F",nil,30000],
 						["MineDetector",nil,1000],
 						["acc_flashlight",nil,750],
@@ -86,6 +89,8 @@ switch(_shop) do
 			{
 				["Altis Sergeant Officer Shop",
 					[
+						["SMG_01_F","Vermin",35000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100],
 						["SMG_02_ACO_F",nil,15000],
 						["hgun_ACPC2_F",nil,17500],
 						["arifle_MXC_F",nil,30000],
@@ -94,12 +99,16 @@ switch(_shop) do
 						["arifle_Mk20C_plain_F",nil,15000],
 						["arifle_MXM_DMS_F",nil,50000],
 						["srifle_EBR_F",nil,50000],
+						["launch_Titan_F",nil,200000],
+						["Titan_AA",nil,20000],
 						["optic_MRCO",nil,5000],
 						["optic_Arco",nil,2500],
 						["optic_SOS",nil,4000],
+						["optic_DMS",nil,7500],
 						["Rangefinder",nil,7000],
 						["acc_pointer_IR",nil,2500],
 						["muzzle_snds_H",nil,2750],
+						["muzzle_snds_B",nil,4000],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["30Rnd_9x21_Mag",nil,60],
 						["9Rnd_45ACP_Mag",nil,45],
@@ -108,6 +117,24 @@ switch(_shop) do
 						["100Rnd_65x39_caseless_mag",nil,500],
 						["20Rnd_762x51_Mag",nil,300],
 						["30Rnd_556x45_Stanag",nil,100]
+					]
+				];
+			};
+		};
+	};
+	
+	case "copdonator":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (__GETC__(life_coplevel) < 2): {"You are not at a patrol officer rank!"};
+			case (__GETC__(life_donator) < 3): {"You are not a level 3 donator!"};
+			default
+			{
+				["Cop Donator's Store",
+					[
+						["B_UavTerminal",nil,10000]
 					]
 				];
 			};
@@ -124,8 +151,10 @@ switch(_shop) do
 			{
 				["Mohammed's Jihadi Shop",
 					[
-						["arifle_TRG20_F",nil,25000],
+						["arifle_TRG20_F","TRG Carbine",25000],
+						["arifle_TRG21_F",nil,27500],
 						["arifle_Katiba_F",nil,30000],
+						["arifle_Katiba_C_F","Katiba Carbine",30000],
 						["srifle_DMR_01_F",nil,50000],
 						["arifle_SDAR_F",nil,20000],
 						["optic_ACO_grn",nil,3500],
@@ -197,8 +226,11 @@ switch(_shop) do
 					[
 						["hgun_Rook40_F",nil,600],
 						["hgun_PDW2000_F",nil,5000],
+						["SMG_01_F","Vermin",35000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100],
 						["SMG_02_F",nil,50000],
-						["arifle_MK20C_plain_F",nil,25000],
+						["arifle_MK20_F",nil,30000],
+ 						["arifle_MK20C_F","MK20 Carbine",25000],
 						["optic_ACO_grn_smg",nil,500],
 						["acc_pointer_IR",nil,1000],
 						["srifle_GM6_F",nil,300000],
@@ -222,17 +254,26 @@ switch(_shop) do
 						["hgun_Rook40_F",nil,500],
 						["hgun_PDW2000_F",nil,4000],
 						["hgun_pistol_heavy_01_F",nil,5850],
-						["arifle_Mk20C_plain_F",nil,15000],
+						["hgun_Pistol_heavy_02_F",nil,6000],
+						["SMG_01_F",Vermin,35000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100],
+						["arifle_MK20_F",nil,20000],
+ 						["arifle_MK20C_F","MK20 Carbine",15000],
 						["arifle_MX_SW_F",nil,100000],
 						["arifle_MXM_DMS_F",nil,50000],
 						["srifle_GM6_F",nil,175000],
 						["srifle_EBR_F",nil,50000],
 						["launch_Titan_short_F",nil,200000],
+						["Titan_AP",nil,25000],
 						["launch_Titan_F",nil,400000],
+						["Titan_AA",nil,50000],
 						["acc_pointer_IR",nil,500],
 						["optic_ACO_grn_smg",nil,250],
-						["optic_MRCO",nil,10000],
+						["optic_MRCO",nil,5000],
 						["optic_SOS",nil,4000],
+						["optic_DMS",nil,10000],
+ 						["optic_MRD",nil,3500],
+						["optic_Yorris",nil,2500],
 						["Rangefinder",nil,7000],
 						["NVGoggles",nil,2000],
 						["ToolKit",nil,20],
@@ -240,14 +281,13 @@ switch(_shop) do
 						["FirstAidKit",nil,20],
 						["16Rnd_9x21_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,25],
+						["6Rnd_45ACP_Cylinder",nil,40],
 						["11Rnd_45ACP_Mag",nil,85],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["100Rnd_65x39_caseless_mag",nil,500],
 						["20Rnd_762x51_Mag",nil,300],
 						["30Rnd_556x45_Stanag",nil,100],
-						["5Rnd_127x108_Mag",nil,200],
-						["Titan_AP",nil,25000],
-						["Titan_AA",nil,50000]
+						["5Rnd_127x108_Mag",nil,200]
 					]
 				];
 			};
