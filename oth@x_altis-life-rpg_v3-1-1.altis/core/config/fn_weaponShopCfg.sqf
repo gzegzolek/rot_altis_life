@@ -32,6 +32,8 @@ switch(_shop) do
 						["arifle_sdar_F","Taser Rifle",20000],
 						["hgun_P07_snds_F","Stun Pistol",2000],
 						["hgun_P07_F",nil,7500],
+						["ItemMap",nil,5],
+						["ItemCompass",nil,5],
 						["Binocular",nil,150],
 						["Rangefinder",nil,7000],
 						["ItemGPS",nil,100],
