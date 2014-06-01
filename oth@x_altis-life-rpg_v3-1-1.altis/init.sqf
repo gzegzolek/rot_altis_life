@@ -28,6 +28,8 @@ if(X_Client) then
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
 [] execVM "weather.sqf";
+[] execVM "hackerSpanker.sqf";
+[] execVM "hackerSpanker2.sqf";
 
 if(!StartProgress) then
 {
