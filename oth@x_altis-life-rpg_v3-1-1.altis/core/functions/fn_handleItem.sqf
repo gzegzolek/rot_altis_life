@@ -1,16 +1,18 @@
 /*
-	@version: 1.8
+	@version: 2.2
 	@file_name: fn_handleItem.sqf
 	@file_author: TAW_Tonic
-	@file_edit: 8/27/2013
+	@file_edit: 12/7/2013
 	@file_description: Handles the incoming requests and adds or removes it.
 */
-private["_item","_details","_bool","_ispack","_items","_isgun","_ongun","_override"];
+private["_item","_details","_bool","_ispack","_items","_isgun","_ongun","_override","_toUniform","_toVest"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
 _bool = [_this,1,false,[false]] call BIS_fnc_param;
 _ispack = [_this,2,false,[false]] call BIS_fnc_param;
 _ongun = [_this,3,false,[false]] call BIS_fnc_param;
 _override = [_this,4,false,[false]] call BIS_fnc_param;
+_toUniform = [_this,5,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a uniform.
+_toVest = [_this,6,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a vest
 
 //Some checks
 if(_item == "") exitWith {};
@@ -19,16 +21,18 @@ _isgun = false;
 _details = [_item] call life_fnc_fetchCfgDetails;
 if(count _details == 0) exitWith {};
 
-
 if(_bool) then
 {
 	switch((_details select 6)) do
 	{
 		case "CfgGlasses":
 		{
+			if(_toUniform) exitWith {player addItemToUniform _item;};
+			if(_toVest) exitWith {player addItemToVest _item;};
+
 			if(_ispack) then
 			{
-				(unitBackpack player) addItemCargoGlobal [_item,1];
+				player addItemToBackpack _item;
 			}
 				else
 			{
@@ -46,7 +50,7 @@ if(_bool) then
 				};
 			};
 		};
-		
+
 		case "CfgVehicles":
 		{
 			if(backpack player != "") then
@@ -61,21 +65,23 @@ if(_bool) then
 				{[_x,true,true,false,true] spawn life_fnc_handleItem; } foreach _items;
 			};
 		};
-		
+
 		case "CfgMagazines":
 		{
-			if(_ispack) then
-			{
-				(unitBackpack player) addMagazineCargoGlobal [_item,1];
-			}
-				else
-			{
-				player addMagazine _item;
-			};
+			if(_toUniform) exitWith {player addItemToUniform _item;};
+			if(_toVest) exitWith {player addItemToVest _item;};
+			if(_ispack) exitWith {player addItemToBackpack _item;};
+
+			player addMagazine _item;
 		};
-		
+
 		case "CfgWeapons":
 		{
+			//New addition
+			if(_toUniform) exitWith {player addItemToUniform _item;};
+			if(_toVest) exitWith {player addItemToVest _item;};
+			if(_ispack) exitWith {player addItemToBackpack _item;};
+
 			if((_details select 4) in [1,2,4,5,4096]) then
 			{
 				if((_details select 4) == 4096) then
@@ -90,8 +96,7 @@ if(_bool) then
 					_isgun = true;
 				};
 			};
-			
-			
+
 			if(_isgun) then
 			{
 				if(!_ispack && _override) exitWith {}; //It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
@@ -101,14 +106,7 @@ if(_bool) then
 				}
 					else
 				{
-					if(_ispack) then
-					{
-						if(backpack player != "") then {(unitBackpack player) addWeaponCargoGlobal [_item,1];};
-					}
-						else
-					{
-						player addWeapon _item;
-					};
+					player addWeapon _item;
 				};
 			}
 				else
@@ -119,7 +117,7 @@ if(_bool) then
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -145,7 +143,7 @@ if(_bool) then
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -174,7 +172,7 @@ if(_bool) then
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -195,9 +193,9 @@ if(_bool) then
 										_items = uniformItems player;
 										removeUniform player;
 									};
-									
+
 									player addUniform _item;
-									
+
 									if(!isNil {_items}) then
 									{
 										{[_x,true,false,false,true] spawn life_fnc_handleItem;} foreach _items;
@@ -210,7 +208,7 @@ if(_bool) then
 					{
 						if(_ispack) then 
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -231,9 +229,9 @@ if(_bool) then
 										_items = vestItems player;
 										removeVest player;
 									};
-									
+
 									player addVest _item;
-									
+
 									if(!isNil {_items}) then
 									{
 										{[_x,true,false,false,true] spawn life_fnc_handleItem;} foreach _items;
@@ -242,12 +240,12 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					case 201:
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -290,18 +288,18 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					case 301:
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
 							private["_type"];
 							_type = [_item,301] call life_fnc_accType;
-							
+
 							if(_ongun) then
 							{ 
 								switch (_type) do
@@ -339,20 +337,20 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					case 101:
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
 							private["_type"];
 							_type = [_item,101] call life_fnc_accType;
-							
+
 							if(_ongun) then
-							{ 
+							{
 								switch (_type) do
 								{
 									case 1: { player addPrimaryWeaponItem _item; };
@@ -388,12 +386,12 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					case 621:
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -408,12 +406,12 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					case 616:
 					{
 						if(_ispack) then
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						}
 							else
 						{
@@ -428,12 +426,12 @@ if(_bool) then
 							};
 						};
 					};
-					
+
 					default 
 					{ 
 						if(_ispack) then 
 						{
-							(unitBackpack player) addItemCargoGlobal [_item,1];
+							player addItemToBackpack _item;
 						} 
 							else 
 						{
@@ -453,12 +451,12 @@ if(_bool) then
 		{
 			removeBackpack player;
 		};
-		
+
 		case "CfgMagazines":
 		{
 			player removeMagazine _item;
 		};
-		
+
 		case "CfgGlasses":
 		{
 			if(_item == goggles player) then
@@ -470,7 +468,7 @@ if(_bool) then
 				player removeItem _item;
 			};
 		};
-		
+
 		case "CfgWeapons":
 		{
 			if((_details select 4) in [1,2,4,5,4096]) then
@@ -487,7 +485,7 @@ if(_bool) then
 					_isgun = true;
 				};
 			};
-			
+
 			if(_isgun) then
 			{
 				switch(true) do
@@ -498,31 +496,79 @@ if(_bool) then
 					case (_item in assignedItems player) : {_ispack = false;};
 					default {_ispack = true;};
 				};
-				
+
 				if(_item == "MineDetector") then
 				{
 					player removeItem _item;
 				}
 					else
 				{
+					//FUCK YOU BOHEMIA INTERACTIVE I SHOULDN'T HAVE TO DO THIS.
+					//Lovely code provided by [OCB]Dash
+					private["_tmpfunction"];
+					_tmpfunction = {
+						private["_tWeapons","_tWeaponCount"];
+						switch(true) do {
+							case (_this in (uniformItems player)): {
+								_tWeapons = (getWeaponCargo (uniformContainer player)) select 0;
+								_tWeaponCount = (getWeaponCargo (uniformContainer  player)) select 1;
+
+								clearWeaponCargo (uniformContainer player);
+								{
+									_numVestWeps = _tWeaponCount select _forEachIndex;
+									if(_x == _this) then
+									{
+										_numVestWeps = _numVestWeps - 1;                        
+									};
+									(uniformContainer player) addWeaponCargo [ _x,_numVestWeps];
+								}forEach _tWeapons;
+							};
+
+							case (_this in (vestItems player)): {
+								_tWeapons = (getWeaponCargo (vestContainer player)) select 0;
+								_tWeaponCount = (getWeaponCargo (vestContainer  player)) select 1;
+
+								clearWeaponCargo (vestContainer player);
+								{
+									_numVestWeps = _tWeaponCount select _forEachIndex;
+									if(_x == _this) then
+									{
+										_numVestWeps = _numVestWeps - 1;                        
+									};
+									(vestContainer player) addWeaponCargo [ _x,_numVestWeps];
+								}forEach _tWeapons;
+							};
+
+							case (_this in (backpackItems player)): {
+								_tWeapons = (getWeaponCargo (backpackContainer player)) select 0;
+								_tWeaponCount = (getWeaponCargo (backpackContainer  player)) select 1;
+
+								clearWeaponCargo (backpackContainer player);
+								{
+									_numVestWeps = _tWeaponCount select _forEachIndex;
+									if(_x == _this) then
+									{
+										_numVestWeps = _numVestWeps - 1;                        
+									};
+									(backpackContainer player) addWeaponCargo [ _x,_numVestWeps];
+								}forEach _tWeapons;
+							};
+						};
+					};
+
 					if(_ispack) then
 					{
-						_items = (backpackItems player);
-						_index = _items find _item;
-						if(_index != -1) then
-						{
-							_items set[_index,-1];
-							_items = _items - [-1];
-						};
-						clearWeaponCargo (unitBackpack player);
-						if(count _items > 0) then
-						{
-							{[_x,true,true,false,false] spawn life_fnc_handleItem;} foreach _items;
-						};
+						player removeItemFromBackpack _item;
 					}
 						else
 					{
-						player removeWeapon _item;
+						switch(true) do
+						{
+							case (_item in (uniformItems player)): {_item call _tmpfunction;};
+							case (_item in (vestItems player)) : {_item call _tmpfunction;};
+							case (_item in (backpackItems player)) : {_item call _tmpfunction;};
+							default {player removeWeapon _item;};
+						};
 					};
 				};
 			}
