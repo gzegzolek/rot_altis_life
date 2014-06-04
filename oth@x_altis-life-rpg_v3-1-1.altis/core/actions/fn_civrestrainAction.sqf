@@ -10,7 +10,7 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((_unit getVariable "zipTie")) exitWith {};
 if((_unit getVariable "restrained")) exitWith {};
-if((animationState cursorTarget) != "Incapacitated") exitWith{};
+if((animationState cursorTarget) != "Incapacitated") exitWith{hint"You need to knock the player out before using a ziptie."};
 //if(side _unit == west) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
