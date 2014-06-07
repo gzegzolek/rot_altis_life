@@ -33,6 +33,7 @@ life_clothing_purchase = [-1,-1,-1,-1,-1];
 //life_gcam_admin_lvl = 2;
 life_spectator_admin_lvl = 2;
 life_teleport_admin_lvl = 3;
+life_action_gather = false;  //added to remove interaction key spam picking up items
 /*
 *****************************
 ****** Weight Variables *****
