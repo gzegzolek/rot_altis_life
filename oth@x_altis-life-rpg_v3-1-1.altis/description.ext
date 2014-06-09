@@ -63,6 +63,30 @@ class CfgSounds
    sound[] = {"\sounds\hits.ogg", 0.5, 1};
    titles[] = {};
    };
+    class target_beep
+  {
+	name="target_beep";
+	sound[] = {"\sounds\target_beep.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
+  class target_shoot
+  {
+	name="target_shoot";
+	sound[] = {"\sounds\target_shoot.ogg", 1.0, 1};
+	titles[] = {0, " "};
+  };
+  class handcuffs
+  {
+  name="handcuffs";
+  sound[] = {"\sounds\handcuffs.ogg", 1.0, 1};
+  titles[] = {0, " "};
+  };
+  class zipties
+  {
+  name="zipties";
+  sound[] = {"\sounds\zip_tie.ogg", 1.0, 1};
+  titles[] = {0, " "};
+  };
 };
 
 class CfgDebriefing
