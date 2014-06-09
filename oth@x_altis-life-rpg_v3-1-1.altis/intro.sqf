@@ -18,11 +18,7 @@ _civ = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Shift - N releases a ziptied player.",
 		"Civ's save gear on respawn.",
 		"Auto Sync every 10 minutes.",
-		"NEW: Donators Clothing Store open - check the Donator store NOW!!",
-		"NEW: New rebel clothing/backpacks available.",
-		"NEW: More backpacks added to Bruce's Outback Outfits.",
-		"NEW: More guns now available in all gun stores.",
-		"NEW: Turtles are fixed and back to $15k per turtle.",
+		"Turtles are fixed and back to $15k per turtle.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
@@ -38,10 +34,8 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Flip your car back over (use the interaction menu).",
 		"Civ's save gear on respawn.",
 		"Auto Sync every 10 minutes.",
-		"NEW: Donator lvl 3 cop shop added.",
-		"NEW: UAV's now available for donator cops (backback and terminal).",
-		"NEW: AA Launchers added for Sergeants.",
-		"NEW: Turtles are fixed and back to $15k per turtle.",
+		"Turtles are fixed and back to $15k per turtle.",
+		"NEW: Anti-Air Fuel Mk1 available in the cop shop.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
 ]];
 
