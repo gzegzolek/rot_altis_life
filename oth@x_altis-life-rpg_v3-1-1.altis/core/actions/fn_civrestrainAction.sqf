@@ -20,7 +20,8 @@ if(side player == civilian) then {
 };
 //Broadcast!
 
-_unit say3D "zipties";
+[player,"zipties"] call life_fnc_globalSound;
+playSound "zipties";
 
 _unit setVariable["zipTie",true,true];
 [[player], "life_fnc_civrestrain", _unit, false] spawn life_fnc_MP;
