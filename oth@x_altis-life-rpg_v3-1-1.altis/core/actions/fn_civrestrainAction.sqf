@@ -10,7 +10,7 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((_unit getVariable "zipTie")) exitWith {};
 if((_unit getVariable "restrained")) exitWith {};
-if((animationState cursorTarget) != "Incapacitated") exitWith{hint"You need to knock the player out before using a ziptie."};
+if((animationState cursorTarget) != "Incapacitated") exitWith{};
 //if(side _unit == west) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
@@ -19,6 +19,8 @@ if(side player == civilian) then {
 	life_inv_zipties = life_inv_zipties - 1;
 };
 //Broadcast!
+
+_unit say3D "zipties";
 
 _unit setVariable["zipTie",true,true];
 [[player], "life_fnc_civrestrain", _unit, false] spawn life_fnc_MP;
