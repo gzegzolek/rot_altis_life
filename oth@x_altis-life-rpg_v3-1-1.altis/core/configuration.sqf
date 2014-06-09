@@ -146,7 +146,9 @@ life_inv_items =
 	"life_inv_rock",
 	"life_inv_cement",
 	"life_inv_goldbar",
-	"life_inv_zipties"
+	"life_inv_zipties",
+	"life_inv_antiairfuel",
+	"life_inv_antiairfuelammo"
 ];
 
 //Setup variable inv vars.
@@ -223,7 +225,9 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["zipties",50]
+	["zipties",50],
+	["antiairfuel",100000],
+	["antiairfuelammo",2000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -249,7 +253,9 @@ buy_array =
 	["fuelF",850],
 	["peach",68],
 	["spikeStrip",1500],
-	["zipties",100]
+	["zipties",100],
+	["antiairfuel",150000],
+	["antiairfuelammo",8000]
 ];
 __CONST__(buy_array,buy_array);
 

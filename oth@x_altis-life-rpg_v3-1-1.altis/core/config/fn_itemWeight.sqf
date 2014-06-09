@@ -52,5 +52,7 @@ switch (_item) do
 	case "cement": {5};
 	case "goldbar": {12};
 	case "zipties": {1};
+	case "antiairfuel": {40};
+	case "antiairfuelammo": {10};
 	default {1};
 };

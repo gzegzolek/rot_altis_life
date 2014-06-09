@@ -172,6 +172,8 @@ class Life_Client_Core
 		class fedSuccess {};
 		class actionKeyHandler {};
 		class autoSave {};
+		class globalSound {};
+		class globalSoundClient {};
 	};
 	
 	class Network
@@ -302,5 +304,13 @@ class Life_Client_Core
 		class impoundMenu {};
 		class unimpound {};
 		class sellGarage {};
+	};
+	
+	class Birddown
+	{
+		file = "core\birddown";
+		
+		class fireBirdDown;
+		class birdDownShot;
 	};
 };

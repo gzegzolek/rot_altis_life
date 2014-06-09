@@ -61,6 +61,8 @@ switch (_mode) do
 			case "rock": {"life_inv_rock"};
 			case "goldbar": {"life_inv_goldbar"};
 			case "zipties": {"life_inv_zipties"};
+			case "antiairfuel": {"life_inv_antiairfuel"};
+			case "antiairfuelammo": {"life_inv_antiairfuelammo"};
 		};
 	};
 	
@@ -113,6 +115,8 @@ switch (_mode) do
 			case "life_inv_rock": {"rock"};
 			case "life_inv_goldbar": {"goldbar"};
 			case "life_inv_zipties": {"zipties"};
+			case "life_inv_antiairfuel": {"antiairfuel"};
+			case "life_inv_antiairfuelammo": {"antiairfuelammo"};
 		};
 	};
 };

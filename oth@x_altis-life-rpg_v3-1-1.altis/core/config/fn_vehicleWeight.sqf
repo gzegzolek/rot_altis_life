@@ -36,6 +36,8 @@ switch ((typeOf _vehicle)) do
 	case "B_Heli_Light_01_F": {_weight = 90;};
 	case "O_Heli_Light_02_unarmed_F": {_weight = 210;};
 	case "I_Heli_Transport_02_F": {_weight = 375;};
+	case "B_Heli_Transport_01_F": {_weight = 190;};			//Add GhostHawk
+	case "I_Heli_light_03_unarmed_F": {_weight = 150;};		//Add Hellcat
 	case "C_Rubberboat": {_weight = 45;};
 	case "O_Boat_Armed_01_hmg_F": {_weight = 175;};
 	case "B_Boat_Armed_01_minigun_F": {_weight = 175;};

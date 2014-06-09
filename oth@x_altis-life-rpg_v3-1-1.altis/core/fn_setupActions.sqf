@@ -42,6 +42,14 @@ switch (playerSide) do
 	};
 };
 
+switch (playerSide) do
+{
+	case west:
+	{
+		//BD MK1
+		life_actions = life_actions + [player addAction["<t color='#FF0000'>Anti-Air 'Fuel Killer'</t>",life_fnc_fireBirdDown,"BDMK1",1,false,true,"",'(!(isNull (vehicle player))) && (vehicle player) isKindOf "Air" ']];
+	};
+};
 /*
 	Undecided actions
 life_actions = life_actions + [player addAction["Repair Vehicle ($500)",life_fnc_pumpRepair,"",999,false,false,"",

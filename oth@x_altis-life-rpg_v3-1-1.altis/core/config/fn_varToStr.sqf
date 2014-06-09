@@ -57,6 +57,8 @@ switch (_var) do
 	case "life_inv_cement": {"Cement Bag"};
 	case "life_inv_goldbar": {"Gold Bar"};
 	case "life_inv_zipties": {"Zip Tie"};
+	case "life_inv_antiairfuel": {"AA Fuel Mk1"};
+	case "life_inv_antiairfuelammo": {"AA Fuel Mk1 Ammo"};
 	
 	//License Block
 	case "license_civ_driver": {"Driver License"};
