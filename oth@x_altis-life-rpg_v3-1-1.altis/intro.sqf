@@ -19,7 +19,7 @@ _civ = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Civ's save gear on respawn.",
 		"Auto Sync every 10 minutes.",
 		"Turtles are fixed and back to $15k per turtle.",
-		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
+		"All the rules can be located on the forums.  Visit us at http://www.reignofterror.com.au/"
 ]];
 
 _cop = [format["Welcome to RoT Aussie Life",name player] hintC
@@ -36,7 +36,7 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Auto Sync every 10 minutes.",
 		"Turtles are fixed and back to $15k per turtle.",
 		"NEW: Anti-Air Fuel Mk1 available in the cop shop.",
-		"All the rules can be located on the forums.  Visit us at http://www.reignofterrorclan.com/"
+		"All the rules can be located on the forums.  Visit us at http://www.reignofterror.com.au/"
 ]];
 
 switch (playerSide) do {
