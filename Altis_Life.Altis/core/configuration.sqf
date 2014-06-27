@@ -239,7 +239,7 @@ sell_array =
 	["spikeStrip",1200],
 	["cement",1950],
 	["zipties",50],
-	["antiairfuel",100000],
+	["antiairfuel",10000],
 	["antiairfuelammo",2000]
 ];
 __CONST__(sell_array,sell_array);
