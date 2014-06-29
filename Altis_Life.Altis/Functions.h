@@ -97,7 +97,6 @@ class Life_Client_Core
 		class getDPMission {};
 		class postBail {};
 		class processAction {};
-		class robBankAction {};
 		class sellOil {};
 		class suicideBomb {};
 		class arrestAction {};
@@ -117,7 +116,6 @@ class Life_Client_Core
 		class gatherCocaine {};
 		class pumpRepair {};
 		class packupSpikes {};
-		class robFederal {};
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
@@ -125,6 +123,7 @@ class Life_Client_Core
 		class civrestrainAction {};
 		class unzip {};
 		class unrestrainciv {};
+		class SellGoldBars {};
 	};
 	
 	class Config
@@ -245,7 +244,6 @@ class Life_Client_Core
 		class tazed {};
 		class civFetchGear {};
 		class civLoadGear {};
-		class robReserve {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
@@ -253,6 +251,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class zoneCreator {};
 		class civrestrain {};
+		class demoChargeTimer {};
 	};
 	
 	class Vehicle
@@ -294,6 +293,9 @@ class Life_Client_Core
 		class sirenLights {};
 		class licenseCheck {};
 		class licensesRead {};
+		class repairDoor {};
+		class doorAnimate {};
+		class fedCamDisplay {};
 	};
 	
 	class Gangs
@@ -344,6 +346,9 @@ class Life_Client_Core
 		class jerryRefuel {};
 		class flashbang {};
 		class smokeweed {}; //added for smoking weed
+		class boltcutter {};
+		class blastingCharge {};
+		class defuseKit {};
 	};
 	
 	class Dialog_Controls
@@ -363,6 +368,10 @@ class Life_Client_Core
 		class bankWithdraw {};
 		class bankTransfer {};
 		class garageLBChange {};
+		class safeInventory {};
+		class safeOpen {};
+		class safeTake {};
+		class safeFix {};
 	};
 	
 	class Birddown

@@ -436,38 +436,6 @@ _object setPosATL _pos;
 
 
 
-_pos = [13214.15918,13487.417969,-0.0145092];
-
-_object = createVehicle ["Land_CashDesk_F", _pos, [], 0, "CAN_COLLIDE"];
-
-_object setDir 41;
-
-_object setPosATL _pos;
-
-
-
-_pos = [13216.985352,13484.951172,0.0227394];
-
-_object = createVehicle ["Land_CashDesk_F", _pos, [], 0, "CAN_COLLIDE"];
-
-_object setDir 40;
-
-_object setPosATL _pos;
-
-
-
-_pos = [13211.367188,13489.768555,0.0107327];
-
-_object = createVehicle ["Land_CashDesk_F", _pos, [], 0, "CAN_COLLIDE"];
-
-_object setDir 40;
-
-_object setPosATL _pos;
-
-
-
-
-
 _pos = [13145.884766,13489.276367,-0.00508118];
 
 _object = createVehicle ["Land_CncWall4_F", _pos, [], 0, "CAN_COLLIDE"];
@@ -484,6 +452,12 @@ _object = createVehicle ["Land_CncWall4_F", _pos, [], 0, "CAN_COLLIDE"];
 
 _object setDir 312;
 
+_object setPosATL _pos;
+
+
+_pos = [13215.225586,13487.643555,0.478813];
+_object = createVehicle ["Land_Research_house_V1_F", _pos, [], 0, "CAN_COLLIDE"];
+_object setDir 40;
 _object setPosATL _pos;
 
 

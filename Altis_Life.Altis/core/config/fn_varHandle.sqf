@@ -63,6 +63,9 @@ switch (_mode) do
 			case "zipties": {"life_inv_zipties"};
 			case "antiairfuel": {"life_inv_antiairfuel"};
 			case "antiairfuelammo": {"life_inv_antiairfuelammo"};
+			case "blastingcharge": {"life_inv_blastingcharge"};
+			case "boltcutter": {"life_inv_boltcutter"};
+			case "defusekit": {"life_inv_defusekit"};
 		};
 	};
 	
@@ -117,6 +120,9 @@ switch (_mode) do
 			case "life_inv_zipties": {"zipties"};
 			case "life_inv_antiairfuel": {"antiairfuel"};
 			case "life_inv_antiairfuelammo": {"antiairfuelammo"};
+			case "life_inv_blastingcharge": {"blastingcharge"};
+			case "life_inv_boltcutter": {"boltcutter"};
+			case "life_inv_defusekit": {"defusekit"};
 		};
 	};
 };

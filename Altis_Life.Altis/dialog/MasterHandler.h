@@ -23,4 +23,5 @@
 #include "pInteraction.h"
 #include "deathScreen.h"
 #include "vehicleShop.h"
+#include "federalReserve.h"
 #include "spectator\spectating.hpp"

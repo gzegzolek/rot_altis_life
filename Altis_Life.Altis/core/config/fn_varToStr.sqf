@@ -59,6 +59,9 @@ switch (_var) do
 	case "life_inv_zipties": {"Zip Tie"};
 	case "life_inv_antiairfuel": {"AA Fuel Mk1"};
 	case "life_inv_antiairfuelammo": {"AA Fuel Mk1 Ammo"};
+	case "life_inv_blastingcharge": {"Blasting Charge"};
+	case "life_inv_boltcutter": {"Bolt Cutter"};
+	case "life_inv_defusekit": {"Bomb Defusal Kit"};
 	
 	//License Block
 	case "license_civ_driver": {"Driver License"};

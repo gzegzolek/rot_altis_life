@@ -24,7 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 1; //Scaled in minutes
+life_respawn_timer = .1; //Scaled in minutes
 life_has_insurance = false;
 life_knockout = false;
 life_interrupted = false;
@@ -160,7 +160,10 @@ life_inv_items =
 	"life_inv_goldbar",
 	"life_inv_zipties",
 	"life_inv_antiairfuel",
-	"life_inv_antiairfuelammo"
+	"life_inv_antiairfuelammo",
+	"life_inv_blastingcharge",
+	"life_inv_boltcutter",
+	"life_inv_defusekit"
 ];
 
 //Setup variable inv vars.
@@ -197,7 +200,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",25000]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",25000],["blastingcharge",10000],["boltcutter",500]];
 
 
 /*
@@ -240,7 +243,8 @@ sell_array =
 	["cement",1950],
 	["zipties",50],
 	["antiairfuel",10000],
-	["antiairfuelammo",2000]
+	["antiairfuelammo",2000],
+	["goldbar",95000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -266,6 +270,9 @@ buy_array =
 	["fuelF",850],
 	["peach",68],
 	["spikeStrip",1500],
+	["blastingcharge",35000],
+	["boltcutter",7500],
+	["defusekit",2500],
 	["zipties",100],
 	["antiairfuel",50000],
 	["antiairfuelammo",8000]

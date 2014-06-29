@@ -43,6 +43,7 @@ switch ((typeOf _vehicle)) do
 	case "O_Truck_03_transport_F": {650};
 	case "O_Truck_03_covered_F": {700};
 	case "O_Truck_03_device_F": {350};
+	case "Land_CargoBox_V1_F": {5000};
 	default {-1};
 };
 

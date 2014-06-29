@@ -28,16 +28,6 @@ _object setPosATL _pos;
 
 
 
-_pos = [3276.75415,12970.494141,0.0498757];
-
-_object = createVehicle ["MapBoard_altis_F", _pos, [], 0, "CAN_COLLIDE"];
-
-_object setDir 221.583;
-
-_object setPosATL _pos;
-
-
-
 _pos = [3280.757813,12976.203125,0.0119922];
 
 _object = createVehicle ["Land_Metal_rack_Tall_F", _pos, [], 0, "CAN_COLLIDE"];
