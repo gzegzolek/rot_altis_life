@@ -8,7 +8,7 @@
 */
 
 while {true} do {
-    sleep 600;
+    sleep 1800;
     if (alive player) then {
         if (playerside == west) then {
         [] call life_fnc_saveGear;    //this is what allows the cop gear to save
