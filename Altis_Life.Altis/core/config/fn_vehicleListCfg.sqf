@@ -56,12 +56,12 @@ switch (_shop) do
 	
 	case "donator_1":
 	{
-		_return =
-		[
-			["B_Quadbike_01_F",1000],
-			["C_Offroad_01_F",3750],
-			["C_SUV_01_F",20000]
-		];
+		if(__GETC__(life_donator) > 0) then
+		{
+			_return set[count _return,["B_Quadbike_01_F",1000]];
+			_return set[count _return,["C_Offroad_01_F",3750]];
+			_return set[count _return,["C_SUV_01_F",20000]];
+		};
 
 		if(__GETC__(life_donator) > 1) then
 		{
@@ -79,12 +79,12 @@ switch (_shop) do
 	
 	case "donator_2":
 	{
-		_return =
-		[
-			["B_Quadbike_01_F",1000],
-			["C_Offroad_01_F",3750],
-			["C_SUV_01_F",20000]
-		];
+		if(__GETC__(life_donator) > 0) then
+		{
+			_return set[count _return,["B_Quadbike_01_F",1000]];
+			_return set[count _return,["C_Offroad_01_F",3750]];
+			_return set[count _return,["C_SUV_01_F",20000]];
+		};
 
 		if(__GETC__(life_donator) > 1) then
 		{
@@ -107,7 +107,7 @@ switch (_shop) do
 			["C_Van_01_box_F",60000],
 			["I_Truck_02_transport_F",75000],
 			["I_Truck_02_covered_F",100000],
-			["B_Truck_01_transport_F",275000],
+			["B_Truck_01_transport_F",275000]
 		];	
 	};
 	
