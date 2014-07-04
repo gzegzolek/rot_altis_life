@@ -165,6 +165,10 @@ if((life_clothing_purchase select 4) == -1) then
 };
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
+if(playerSide == civilian) then
+{
+	[] call life_fnc_equipGear;
+};
 //Hotfix in for cop gear
 if(playerSide == west) then
 {

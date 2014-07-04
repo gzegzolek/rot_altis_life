@@ -31,13 +31,21 @@ if (playerSide == west) then {
 		};
 };
 
-
 if (playerSide == independent) then {
 	if ((uniform player) == "U_IG_Guerilla2_1") then
 	{
 		player setObjectTextureGlobal [0, "Textures\clothing\medic_uniform.jpg"];
 	};
 };
+
+if  (playerSide == civilian) then {
+	if ((uniform player) == "U_Competitor") then
+	{
+		player setObjectTextureGlobal [0, "Textures\clothing\miningco_uniform.jpg"];
+	};
+};
+
+
 /*
 if (__GETC__(life_adminlevel) > 1) then {
 	if ((uniform player) == "U_BG_Guerilla2_1") then

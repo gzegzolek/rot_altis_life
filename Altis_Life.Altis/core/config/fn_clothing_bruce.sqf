@@ -31,7 +31,7 @@ switch (_filter) do
 		["U_C_HunterBody_grn","The Hunters Look",1500],
 		["U_C_WorkerCoveralls","Mechanic Coveralls",2500],
 		["U_OrestesBody","Surfing On Land",1100],
-		["U_Competitor","Security Services",5000]
+		["U_Competitor","Mining Co. Security",5000]
 		];
 	};
 	
