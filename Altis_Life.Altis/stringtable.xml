@@ -476,6 +476,9 @@
 		<Key ID="STR_Item_Peaches">
 			<Original>Peaches</Original>
 		</Key>
+		<Key ID="STR_Item_Salt">
+			<Original>Salt</Original>
+		</Key>
 	</Package>
 	<Package name="Federal_Reserve">
 		<Key ID="STR_NOTF_FRRobbery_fail">

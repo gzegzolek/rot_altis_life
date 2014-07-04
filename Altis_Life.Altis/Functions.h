@@ -124,6 +124,7 @@ class Life_Client_Core
 		class unzip {};
 		class unrestrainciv {};
 		class SellGoldBars {};
+		class gatherSalt {};
 	};
 	
 	class Config

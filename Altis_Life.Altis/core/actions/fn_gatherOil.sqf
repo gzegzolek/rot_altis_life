@@ -12,7 +12,13 @@ if(_sum > 0) then
 {
 	life_action_in_use = true;
 	titleText[format[localize "STR_NOTF_Gathering",localize "STR_Item_Oil"],"PLAIN"];
-	sleep 4;
+	//sleep 4;
+	for "_i" from 0 to 2 do
+	{
+		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+		sleep 2.5;
+	};
 	if(([true,"oilu",_sum] call life_fnc_handleInv)) then
 	{
 		titleText[format[localize "STR_NOTF_Collected",localize "STR_Item_Oil"],"PLAIN"];
