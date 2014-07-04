@@ -13,9 +13,9 @@ sleep 15; //Wait in seconds before the credits start after player is in-game
 _role1 = "Welcome to";
 _role1names = ["Reign of Terror - Aussie Life RPG Server"];
 _role2 = "Version:";
-_role2names = ["3.1.3 Altis Life RPG"];
+_role2names = ["3.1.3.5 Altis Life RPG"];
 _role3 = "Website:";
-_role3names = ["http://www.reignofterror.com.au"];
+_role3names = ["www.reignofterror.com.au"];
 _role4 = "TeamSpeak:";
 _role4names = ["asts.gameservers.com:9541"];
 _role5 = "IMPORTANT NOTICE:";
