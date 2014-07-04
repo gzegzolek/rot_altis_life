@@ -24,7 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 3; //Scaled in minutes
+life_respawn_timer = .5; //Scaled in minutes
 life_has_insurance = false;
 life_knockout = false;
 life_interrupted = false;
@@ -244,7 +244,10 @@ sell_array =
 	["zipties",50],
 	["antiairfuel",10000],
 	["antiairfuelammo",2000],
-	["goldbar",95000]
+	["goldbar",95000],
+	["blastingcharge",20000],
+	["boltcutter",3000],
+	["defusekit",1000]
 ];
 __CONST__(sell_array,sell_array);
 
