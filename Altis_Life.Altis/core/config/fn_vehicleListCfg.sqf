@@ -107,7 +107,10 @@ switch (_shop) do
 			["C_Van_01_box_F",60000],
 			["I_Truck_02_transport_F",75000],
 			["I_Truck_02_covered_F",100000],
-			["B_Truck_01_transport_F",275000]
+			["B_Truck_01_transport_F",275000],
+			["O_Truck_03_transport_F",200000],
+			["O_Truck_03_covered_F",250000],
+			["O_Truck_03_device_F",450000]
 		];	
 	};
 	
@@ -157,9 +160,6 @@ switch (_shop) do
 		{
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",200000]];
-		};
-		if(__GETC__(life_coplevel) > 3) then
-		{
 			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
 		};
@@ -173,11 +173,11 @@ switch (_shop) do
 		{
 			_return set[count _return,
 			["I_Heli_light_03_unarmed_F",200000]];
+			_return set[count _return,
+			["B_Heli_Transport_01_F",200000]];
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return,
-			["B_Heli_Transport_01_F",200000]];
 			_return set[count _return,
 			["B_MRAP_01_hmg_F",750000]];
 		};
