@@ -2,13 +2,14 @@
 /*
 	File: fn_requestReceived.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Called by the server saying that we have a response so let's 
 	sort through the information, validate it and if all valid 
 	set the client up.
 */
 life_session_tries = life_session_tries + 1;
+if(life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
 if(life_session_tries > 3) exitWith {cutText["There was an error in trying to setup your client.","BLACK FADED"]; 0 cutFadeOut 999999999;};
 
 0 cutText ["Received request from server... Validating...","BLACK FADED"];
@@ -41,18 +42,25 @@ switch(playerSide) do {
 		__CONST__(life_coplevel,parseNumber(_this select 7));
 		cop_gear = _this select 8;
 		[] spawn life_fnc_loadGear;
-		life_blacklisted = call compile format["%1",_this select 9];
+		life_blacklisted = _this select 9;
 		__CONST__(life_medicLevel,0);
 	};
-	
+
 	case civilian: {
-		life_is_arrested = call compile format["%1", _this select 7];
+		life_is_arrested = _this select 7;
+		//life_is_arrested = call compile format["%1", _this select 7];
 		civ_gear = _this select 8;
 		__CONST__(life_coplevel,0);
 		__CONST__(life_medicLevel,0);
 		[] spawn life_fnc_civLoadGear;
+		life_houses = _this select 9;
+ 		{
+ 			_house = nearestBuilding (call compile format["%1", _x select 0]);
+ 			life_vehicles set[count life_vehicles,_house];
+ 		} foreach life_houses;
+ 		[] spawn life_fnc_initHouses;
 	};
-	
+
 	case independent: {
 		__CONST__(life_medicLevel,parseNumber(_this select 7));
 		__CONST__(life_copLevel,0);
