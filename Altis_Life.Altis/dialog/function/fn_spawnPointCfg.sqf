@@ -39,6 +39,16 @@ switch (_side) do
 				["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 				["civ_spawn_5","Rebel Area","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
+			
+			if(count life_houses > 0) then {
+ 			{
+ 				_pos = call compile format["%1",_x select 0];
+ 				_house = nearestBuilding _pos;
+ 				_houseName = getText(configFile >> "CfgVehicles" >> (typeOf _house) >> "displayName");
+ 				
+ 				_ret set[count _ret,[format["house_%1",_house getVariable "uid"],_houseName,"\a3\ui_f\data\map\MapControl\lighthouse_ca.paa"]];
+ 			} foreach life_houses;
+ 		};	
 	};
 	
 	if(!license_civ_rebel && playerSide == civilian) then 

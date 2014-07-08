@@ -125,7 +125,26 @@ class Life_Client_Core
 		class unrestrainciv {};
 		class SellGoldBars {};
 		class gatherSalt {};
+		class removeWeaponAction {};
 	};
+	
+	class Housing
+ 	{
+ 		file = "core\housing";
+ 		class buyHouse {};
+ 		class getBuildingPositions {};
+ 		class houseMenu {};
+ 		class isBuildingPosTaken {};
+ 		class lightHouse {};
+ 		class lightHouseAction {};
+ 		class sellHouse {};
+ 		class initHouses {};
+ 		class copBreakDoor {};
+ 		class raidHouse {};
+ 		class lockupHouse {};
+ 		class copHouseOwner {};
+		class lockHouse {};
+ 	};
 	
 	class Config
 	{
@@ -147,6 +166,7 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
+		class houseConfig {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
@@ -221,6 +241,10 @@ class Life_Client_Core
 		class onFired {};
 		class revealObjects {};
 		class equipGear {};
+		class nearestDoor {};
+ 		class inventoryClosed {};
+ 		class inventoryOpened {};
+ 		class isUIDActive {};
 	};
 	
 	class Network
@@ -296,6 +320,7 @@ class Life_Client_Core
 		class repairDoor {};
 		class doorAnimate {};
 		class fedCamDisplay {};
+		class removeWeapons {};
 	};
 	
 	class Gangs
@@ -349,6 +374,7 @@ class Life_Client_Core
 		class boltcutter {};
 		class blastingCharge {};
 		class defuseKit {};
+		class storageBox {};
 	};
 	
 	class Dialog_Controls
@@ -372,6 +398,7 @@ class Life_Client_Core
 		class safeOpen {};
 		class safeTake {};
 		class safeFix {};
+		class vehicleGarage {};
 	};
 	
 	class Birddown
