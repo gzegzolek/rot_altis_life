@@ -6,10 +6,9 @@
 */
 private["_vault","_ui","_title","_progressBar","_cP","_titleText"];
 _vault = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _vault) exitWith {hint "Nothing to see here"};
-if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint "This isn't a vault!"};
+if(isNull _vault) exitWith {};
+if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {};
 if(!(_vault getVariable["chargeplaced",false])) exitWith {hint "There is no charge on the vault?"};
-
 
 life_action_inUse = true;
 //Setup the progress bar
@@ -22,7 +21,6 @@ _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
-life_inv_defusekit = life_inv_defusekit - 1;
 
 while {true} do
 {

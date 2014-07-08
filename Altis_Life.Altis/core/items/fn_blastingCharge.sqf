@@ -11,7 +11,6 @@ if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint "This can only be used 
 if(_vault getVariable["chargeplaced",false]) exitWith {hint "There is already a charge placed on this vault."};
 if(_vault getVariable["safe_open",false]) exitWith {hint "The vault is already opened."};
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
-if(life_inv_blastingcharge < 1) exitWith {hint "You do not have a blasting charge!"};
 
 _vault setVariable["chargeplaced",true,true];
 [[1,"A blasting charge has been placed on the federal reserves vault, You have till the clock runs out to disarm the charge!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
@@ -27,6 +26,4 @@ _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosAT
 fed_bank setVariable["chargeplaced",false,true];
 fed_bank setVariable["safe_open",true,true];
 
-[[getPlayerUID player,player getVariable["realname",name player],"459"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 hint "The vault is now opened";
-hint parseText format["<t color='#FFFFFF'><t align='center'><t size='.8'>THE VAULT IS<br/><t color='#FF0000'><t size ='2'<t align='center'>CRACKED<br/><t color='#FFF700'><t align='center'><t size='1'>GRAB THE GOLD AND RUN"];
