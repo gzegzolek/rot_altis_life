@@ -17,3 +17,4 @@ life_versionInfo = "Altis Life RPG v3.1.3.5";
 StartProgress = true;
 
 [] execVM "welcomemessages.sqf";
+fn_whoDunnit = compile preprocessFileLineNumbers "scripts\fn_whoDunnit.sqf";
