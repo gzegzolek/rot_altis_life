@@ -49,7 +49,9 @@ if(!isNull _source) then {
 			
 			//Temp fix for super tasers on cops.
 			if(playerSide == west && side _source == west) then {
+				if(_projectile in ["B_9x21_Ball","B_556x45_dual"] && _curWep in ["hgun_P07_snds_F","arifle_SDAR_F"]) then {
 				_damage = false;
+				};
 			};
 	};
 };
