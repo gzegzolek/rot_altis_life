@@ -72,7 +72,7 @@ class life_admin_menu {
 		
 		class AdminID : Life_RscButtonMenu {
 			idc = -1;
-			text = $STR_Admin_GetID";
+			text = "$STR_Admin_GetID";
 			onButtonClick = "[] call life_fnc_admingetID;";
 			x = 0.1 + (5 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.88 - (1 / 25);
@@ -125,6 +125,16 @@ class life_admin_menu {
 			text = "ESP";
 			onButtonClick = "[] spawn life_fnc_playermarkers;";
 			x = -0.03 + (5 / 40) + (1 / 250 / (safezoneW / safezoneH));
+ 			y = 0.93 - (1 / 25);
+ 			w = (5 / 40);
+ 			h = (1 / 25);
+		};
+		
+		class GodMode : Life_RscButtonMenu {
+			idc = -1;
+			text = "GodMode";
+			onButtonClick = "[] spawn life_fnc_godMode;";
+			x = 0.1 + (5 / 40) + (1 / 250 / (safezoneW / safezoneH));
  			y = 0.93 - (1 / 25);
  			w = (5 / 40);
  			h = (1 / 25);
