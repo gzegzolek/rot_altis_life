@@ -29,7 +29,7 @@ _ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
-_progressBar progressSetPosition 0.01;
+_progressBar progressSetPosition 0.1;
 _cP = 0.01;
 
 while {true} do
@@ -53,6 +53,8 @@ while {true} do
 	if(life_interrupted) exitWith {};
 	if((player getVariable["restrained",false])) exitWith {};
 	if(player distance _curTarget > _distance) exitWith {_badDistance = true;};
+	[player,"car_alarm"] call life_fnc_globalSound;
+	sleep 1;
 };
 
 //Kill the UI display and check for various states

@@ -91,23 +91,27 @@ class CfgSounds
   sound[] = {"\sounds\zip_tie.ogg", 1.0, 1};
   titles[] = {0, " "};
   };
-  class ambulance
+
+class ambulance
   {
   name="ambulance";
-
-
-
-
-
   sound[] = {"\sounds\ambulance.ogg", 1.0, 1};
   titles[] = {0, " "};
   };
-  class flashbang
-	{
-		name = "flashbang";
-		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
-		titles[] = {};
-	};
+ 
+class flashbang
+  {
+  name = "flashbang";
+  sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+  titles[] = {};
+  };
+
+class car_alarm
+  {
+  name="car_alarm";
+  sound[] = {"\sounds\car_alarm.ogg", 0.25, 1};
+  titles[] = {0, " "};
+  };
 };
 
 class CfgDebriefing
