@@ -42,6 +42,8 @@ switch (_filter) do
 		_ret set[count _ret,["H_Booniehat_khk",nil,300]];
 		if(__GETC__(life_donator) > 1) then
 		{
+			_ret set[count _ret,["H_Booniehat_dgtl",nil,200]];
+			_ret set[count _ret,["H_Booniehat_mcamo",nil,200]];
 			_ret set[count _ret,["H_Cap_blk_ION",nil,150]];
 			_ret set[count _ret,["H_Cap_blk_Raven",nil,150]];
 			_ret set[count _ret,["H_Cap_press",nil,150]];

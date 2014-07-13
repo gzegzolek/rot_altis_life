@@ -34,7 +34,6 @@ switch(_shop) do
 						["hgun_P07_F",nil,7500],
 						["ItemMap",nil,5],
 						["ItemCompass",nil,5],
-						["HandGrenade_Stone","Flashbang",1700],
 						["Binocular",nil,150],
 						["Rangefinder",nil,7000],
 						["ItemGPS",nil,100],

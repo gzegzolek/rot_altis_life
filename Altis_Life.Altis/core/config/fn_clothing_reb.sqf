@@ -38,6 +38,7 @@ switch (_filter) do
 			["H_HelmetO_ocamo",nil,2500],
 			["H_MilCap_ocamo",nil,1200],
 			["H_MilCap_oucamo",nil,1200],
+			["H_Beret_blk",nil,3500],
 			["H_Bandanna_camo",nil,650]
 		];
 	};
