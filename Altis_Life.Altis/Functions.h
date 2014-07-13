@@ -55,6 +55,7 @@ class Life_Client_Core
 		class adminTPtoPlayer {};
 		class adminMAPTP {};
 		class playermarkers {};
+		class godmode {};
 	};
 
 	class Medical_System
@@ -126,6 +127,7 @@ class Life_Client_Core
 		class SellGoldBars {};
 		class gatherSalt {};
 		class removeWeaponAction {};
+		class robShops {};  //Rob Petrol Station
 	};
 	
 	class Housing
