@@ -19,6 +19,9 @@ _civ = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Civ's save gear on respawn.",
 		"Auto Sync every 10 minutes.",
 		"Turtles are fixed and back to $15k per turtle.",
+		"NEW:  Rob Petrol Stations.",
+		"NEW:  Donator Shop Now has a Garage.",
+		"NEW:  Car Alarm goes off when lockpick used.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterror.com.au/"
 ]];
 
@@ -36,6 +39,9 @@ _cop = [format["Welcome to RoT Aussie Life",name player] hintC
 		"Auto Sync every 10 minutes.",
 		"Turtles are fixed and back to $15k per turtle.",
 		"NEW: Anti-Air Fuel Mk1 available in the cop shop.",
+		"NEW:  Rob Petrol Stations.",
+		"NEW:  Donator Shop Now has a Garage.",
+		"NEW:  Car Alarm goes off when lockpick used.",
 		"All the rules can be located on the forums.  Visit us at http://www.reignofterror.com.au/"
 ]];
 
