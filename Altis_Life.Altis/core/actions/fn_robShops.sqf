@@ -28,7 +28,7 @@ _till = 3000 + round(random 12000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
-if(_chance >= 0) then 
+if(_chance >= 80) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
 	[[format["ALARM! - %1 is being robbed!", _name],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
