@@ -53,7 +53,7 @@ while {true} do
 	if(life_interrupted) exitWith {};
 	if((player getVariable["restrained",false])) exitWith {};
 	if(player distance _curTarget > _distance) exitWith {_badDistance = true;};
-	[player,"car_alarm"] call life_fnc_globalSound;
+	//[player,"car_alarm"] call life_fnc_globalSound;
 	sleep 1;
 };
 
