@@ -9,6 +9,7 @@ private["_unit","_corpse"];
 _unit = _this select 0;
 _corpse = _this select 1;
 life_corpse = _corpse;
+_unit enableFatigue false;
 
 //Comment this code out if you want them to keep the weapon on the ground.
 private["_containers"];
