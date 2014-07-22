@@ -25,3 +25,5 @@
 #include "vehicleShop.h"
 #include "federalReserve.h"
 #include "spectator\spectating.hpp"
+#include "common_EditorWrapper.hpp"
+#include "market.hpp"
