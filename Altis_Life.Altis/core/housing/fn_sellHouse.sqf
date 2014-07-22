@@ -18,7 +18,7 @@ if(count _houseCfg == 0) exitWith {};
 
 _action = [
 	format["Are you sure you want to sell your house? It will sell for: <t color='#8cff9b'>$%1</t>",
-	[(_houseCfg select 0)] call life_fnc_numberText,
+	[round((_houseCfg select 0)/2)] call life_fnc_numberText,
 	(_houseCfg select 1)],"Sell House","Sell","Cancel"
 ] call BIS_fnc_guiMessage;
 
