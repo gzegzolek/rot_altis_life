@@ -221,6 +221,9 @@
 		<Key ID="STR_PM_SyncData">
 			<Original>Sync Data</Original>
 		</Key>
+		<Key ID="STR_PM_Market">
+			<Original>Market</Original>
+		</Key>
 	</Package>
 	<Package name="Settings_Menu">
 		<Key ID="STR_SM_Title">
